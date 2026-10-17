@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Care Skincare Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 35px 40px;
+            background-color: #007bff;
+        }
+        
+        .logo {
+            color: white;
+        }
+        
+        .menu {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .auth-buttons a button {
+            padding: 10px 20px;
+            border: 1px solid white;
+            background-color: white;
+            color: #007bff;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .carousel-item img {
+            height: 380px;
+            object-fit: cover;
+        }
+
+        .about-section {
+            width: 70%;
+            margin: 40px auto 20px auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .products-section {
+            padding: 20px 20px 40px 20px;
+            text-align: center;
+        }
+
+        .products-section h2 {
+            margin-bottom: 25px;
+            color: #222;
+        }
+
+        .products-container {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 25px;
+            margin: 0 auto;
+        }
+
+        .card {
+            width: 30%;
+            min-width: 250px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin: 12px 0 6px 0;
+            color: #333;
+        }
+
+        .card p {
+            color: #007bff;
+            font-weight: bold;
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .about-section, .products-container {
+                width: 90%;
+            }
+            .card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .about-section, .products-container {
+                width: 100%;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Glow & Care</h1>
+            </div>
+            
+            <div class="menu">
+                <a href="heeeee.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Shop</a>
+            </div> 
+
+            <div class="auth-buttons">  
+                <a href="login.html"><button type="button">Login</button></a>
+                <a href="Signup.html"><button type="button">Signup</button></a>
+            </div>
+        </nav>
+        
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200" class="d-block w-100" alt="Skincare Essentials">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=1200" class="d-block w-100" alt="Organic Beauty Products">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200" class="d-block w-100" alt="Natural Skincare Routine">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Products Section -->
+        <div class="products-section" id="products">
+            <h2>Skincare & Beauty Products</h2>
+            <div class="products-container" id="products-container">
+                <p>Loading 100+ skincare products...</p>
+            </div>
+        </div>
+
+        <div class="about-section" id="about">
+            <h2>About Our Store</h2>
+            <p>
+            Our journey began with a simple vision – to provide every skin type with 100% natural, gentle, and effective care. We built this store by combining organic ingredients with dermatologically tested formulas so that you can achieve a natural glow and healthy skin.
+            </p>
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; 2026 Glow & Care - Skincare Store. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 100+ Skincare & Beauty products load karne ka function
+        async function loadSkincareProducts() {
+            try {
+                // 100 products fetch honge API se
+                const response = await fetch('https://dummyjson.com/products?limit=100');
+                const data = await response.json();
+                
+                // Skincare, Beauty aur Fragrance items filter karna
+                const skincareProducts = data.products.filter(product => 
+                    product.category === 'skincare' || 
+                    product.category === 'beauty' || 
+                    product.category === 'fragrances'
+                );
+
+                const container = document.getElementById('products-container');
+                container.innerHTML = '';
+
+                // Normal square cards loop
+                skincareProducts.forEach(product => {
+                    let priceInRs = Math.round(product.price * 280);
+
+                    let cardHTML = `
+                        <div class="card">
+                            <img src="${product.thumbnail}" alt="${product.title}">
+                            <h3>${product.title}</h3>
+                            <p>Rs:${priceInRs.toLocaleString()}</p>
+                        </div>
+                    `;
+                    container.innerHTML += cardHTML;
+                });
+            } catch (error) {
+                console.log("Error loading products:", error);
+                document.getElementById('products-container').innerHTML = "<p>Products load nahi ho paye!</p>";
+            }
+        }
+
+        window.onload = loadSkincareProducts;
+    </script>
+</body>
+</html>
